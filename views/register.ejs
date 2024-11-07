@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h1 class="brand-title">BIBIGO</h1>
+        <form action="/register" method="POST">
+          <% if (typeof message !== 'undefined' && message) { %>
+          <p class="message"><%= message %></p>
+          <% } %>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Sign up</button>
+        </form>
+        <p class="login-link">
+          Already have an account? <a href="/login">Log in</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  /* styles.css */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .form-container {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 40px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  .brand-title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fafafa;
+  }
+
+  form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #0095f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  form button:hover {
+    background-color: #007ace;
+  }
+
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8e8e8e;
+  }
+
+  .login-link a {
+    color: #0095f6;
+    text-decoration: none;
+  }
+
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  .message {
+    color: red; /* or any color you prefer */
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+</style>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="brand-logo">
+        <a href="/">BIBIGO</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<style>
+  General reset * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #fafafa;
+  }
+
+  .navbar {
+    width: 100%;
+
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  .brand-logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #262626;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #262626;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .nav-links a:hover {
+    background-color: #fafafa;
+    color: #0095f6;
+  }
+</style>

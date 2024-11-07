@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include('../partials/navbar.ejs') %>
+
+    <main class="content">
+      <% if (name) { %>
+      <p class="welcome-text">Hello, <strong><%= name %></strong>!</p>
+      <p class="welcome-message"><%= welcome %></p>
+      <% } %>
+    </main>
+  </body>
+</html>
+
+<style>
+  /* Reset and general styles */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background-color: #fafafa;
+    min-height: 100vh;
+    color: #262626;
+  }
+
+  a {
+    text-decoration: none;
+    color: #0095f6;
+  }
+
+  /* Navbar styles */
+
+  /* Main content styling */
+  .content {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .welcome-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .welcome-message {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #737373;
+  }
+</style>
